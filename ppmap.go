@@ -142,7 +142,7 @@ dMP     dMP     dMP dMP dMP dMP dMP dMP            @kleiton0x7e
 	    opts := append(chromedp.DefaultExecAllocatorOptions[:],
 		//uncomment the following lines to setup a proxy
 		//chromedp.ProxyServer("localhost:8080"),
-		//chromedp.Flag("ignore-certificate-errors", true),
+		chromedp.Flag("ignore-certificate-errors", true),
 		chromedp.UserAgent(useragents[n]),
 	    )
 	    ctx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
